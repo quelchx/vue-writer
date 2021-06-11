@@ -1,7 +1,7 @@
 {
   "name": "vue-writer",
   "version": "0.0.1",
-  "description": "",
+  "description": "Vue 3 Typewriter Component",
   "main": "dist/vue-writer.ssr.js",
   "browser": "dist/vue-writer.esm.js",
   "module": "dist/vue-writer.esm.js",
@@ -18,7 +18,6 @@
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
@@ -44,5 +43,20 @@
   },
   "engines": {
     "node": ">=12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quelchx/vue-writer.git"
+  },
+  "keywords": [
+    "vue",
+    "nuxt",
+    "typewriter"
+  ],
+  "author": "Eric Quelch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quelchx/vue-writer/issues"
+  },
+  "homepage": "https://github.com/quelchx/vue-writer#readme"
 }
