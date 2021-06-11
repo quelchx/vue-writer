@@ -1,8 +1,8 @@
 <script>
 import { defineComponent } from "vue";
 
-export default /*#__PURE__*/ defineComponent({
-  name: "VueWriter", // vue component name
+export default defineComponent({
+  name: "VueWriter",
   props: {
     array: {
       type: Array,
