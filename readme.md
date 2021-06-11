@@ -2,6 +2,8 @@
 
 **Documentation is under construction -- package is working but still in it's testing + documenting phases!!!**
 
+> This package intention is to be a very lightweight typewriting feature you can add to your existing project! More will be added in time + extra customizations, and feautures.
+
 ## Prerequisites
 
 - Vue v3.x
@@ -30,7 +32,9 @@ Registering the component Globally (Coming Soon!)
 
 ---
 
-Registering the component locally
+Simple usage - registering the component locally
+
+`App.js`
 ```js
 <template>
   <VueWriter :array="['Hello World']" />
@@ -53,6 +57,35 @@ export default {
 <vue-writer :array="['adding single string soon']" />
 ```
 - note: adding single text usage soon!
+
+`typeSpeed`
+- type: Number
+- default: 200
+- required: false
+- usage:
+```html
+<vue-writer :array="arr" :typeSpeed="70" />
+```
+
+`eraseSpeed`
+- type: Number
+- default: 100
+- required: false
+- usage: 
+```html
+<vue-writer :array="arr" :eraseSpeed='50' :typeSpeed='100' />
+```
+
+`delay`
+- type: Number
+- default: 2000
+- required: false
+- usage
+```html
+<vue-writer :array='arr' :eraseSpeed='50' :typeSpeed='100' :delay='1000' />
+```
+- note: 1000 = 1 second
+
 
 
 Package Repository: <a href='https://github.com/quelchx/vue-writer'>https://github.com/quelchx/vue-writer</a>
