@@ -1,9 +1,8 @@
+# Vue Writer 
 
-# Vue Writer
+<img src='demo.gif' />
 
-<div style='text-align:center'>
-  <img src='demo.gif' />
-</div>
+Vue 3 component that simulates typing, and erasing text.
 
 ![npm](https://img.shields.io/npm/v/vue-writer?color=green&label=NPM&style=flat-square)
 [![](https://data.jsdelivr.com/v1/package/npm/vue-writer/badge)](https://www.jsdelivr.com/package/npm/vue-writer)
