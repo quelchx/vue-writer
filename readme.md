@@ -1,3 +1,7 @@
+<div style='text-align:center'>
+  <img src='demo.gif' />
+</div>
+
 # Vue Writer
 
 ![npm](https://img.shields.io/npm/v/vue-writer?color=green&label=NPM&style=flat-square)
@@ -8,9 +12,6 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/quelchx/vue-writer?color=red&label=Open%20Issues&style=flat-square)
 
 **Documentation is under construction -- package is working but still is currrently has additions being added daily**
-
-
-
 
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
