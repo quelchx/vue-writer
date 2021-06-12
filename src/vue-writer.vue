@@ -78,7 +78,7 @@ export default defineComponent({
 }
 
 .is-typed span.typed {
-  color: steelblue;
+  color: black;
 }
 
 .is-typed span.cursor {
