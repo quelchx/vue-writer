@@ -62,7 +62,31 @@ npm install vue-writer
 
 **All examples are being shown while using npm init @vitejs/app to create a vue project in order to consume this package and it's component**
 
-Registering the component Globally (Coming Soon!)
+Registering the component Globally
+
+**main.js**
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import VueWriter from 'vue-writer'
+
+createApp(App).use(VueWriter).mount('#app')
+```
+
+**App.vue** (Example)
+```html
+<template>
+  <VueWriter :array="arr" />
+</template>
+
+<script>
+export default {
+  data() {
+    return { arr: ['Hello', 'From', 'Vue Writer']}
+  }
+}
+</script>
+```
 
 ---
 

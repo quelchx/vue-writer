@@ -83,7 +83,7 @@ export default defineComponent({
 
 .is-typed span.cursor {
   display: inline-block;
-  width: 4px;
+  width: 3px;
   background-color: black;
   animation: blink 1s infinite;
 }
