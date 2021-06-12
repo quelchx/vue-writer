@@ -1,6 +1,6 @@
 {
   "name": "vue-writer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue 3 Typewriter Component",
   "main": "dist/vue-writer.ssr.js",
   "browser": "dist/vue-writer.esm.js",

@@ -20,6 +20,8 @@
   - [NPM](#npm)
   - [CDN](#cdn)
 - [Usage](#usage)
+  - [Global](#global)
+  - [Local](#local)
 - [Properties](#properties)
   - [Array](#array)
   - [Type Speed](#typeSpeed)
@@ -62,6 +64,7 @@ npm install vue-writer
 
 **All examples are being shown while using npm init @vitejs/app to create a vue project in order to consume this package and it's component**
 
+## Global
 Registering the component Globally
 
 **main.js**
@@ -90,9 +93,10 @@ export default {
 
 ---
 
+## Local
 Simple usage - registering the component locally
 
-`App.js`
+**`App.js`**
 
 ```js
 <template>
