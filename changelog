@@ -1,0 +1,13 @@
+v.1.0.2 -> v.1.0.3
+- Added a few extra properties
+  - Caret
+  - Start
+  - Intervals
+
+- Caret: currently added only one extra option, more to come in the feautures
+
+- Start: added prop to control when the animation should begin when the component is loaded
+
+- Intervals: added prop to control how long the current word stays on screen after it is fully typed.
+
+- Notes: more to come!

@@ -26,6 +26,8 @@ Vue 3 component that simulates typing, and erasing text.
   - [Type Speed](#typeSpeed)
   - [Erase Speed](#eraseSpeed)
   - [Delay](#delay)
+  - [Intervals](#intervals)
+  - [Start](#start)
 - [Styling](#styling)
 - [Coming Soon](#coming-soon)
 - [Contribution](#contribution)
@@ -122,7 +124,7 @@ export default {
 <vue-writer :array="['adding single string soon']" />
 ```
 
-- note: adding single text usage soon!
+- note: this prop has to be in an array even if its a single string.
 
 #### `typeSpeed`
 
@@ -135,6 +137,8 @@ export default {
 <vue-writer :array="arr" :typeSpeed="70" />
 ```
 
+- note: higher the number the slower the typing speed is.
+
 #### `eraseSpeed`
 
 - type: Number
@@ -145,6 +149,8 @@ export default {
 ```html
 <vue-writer :array="arr" :eraseSpeed="50" :typeSpeed="100" />
 ```
+
+- note: this prop controlls how fast each character is erased in second intervals.
 
 #### `delay`
 
@@ -158,6 +164,48 @@ export default {
 ```
 
 - note: 1000 = 1 second
+  - the delay prop controls how long the current word in the array will appear on screen before it deletes and begins typing the next word.
+
+#### `intervals`
+
+- type: Number
+- default: 500
+- required: false
+- usage
+
+```html
+<vue-writer :array="arr" :delay="1000" :intervals='200' />
+```
+
+- note: this prop controls how long the next word in the array will appear after the previous word is fully erased. 
+
+#### `start`
+
+- type: Number
+- default: 0
+- required: false
+- usage 
+
+```html
+<vue-writer :array="arr" :delay="1000" :start='2000' />
+```
+
+- note: this props is used to control when the animation should begin. By default when the component is loaded on the page, the animation will start.
+
+#### `caret`
+
+- type: String`
+- default: 'cursor'
+- required: false
+- options:
+  - 'cursor'
+  - 'underscore'
+- usage:
+
+```html
+<vue-writer :array="arr" :caret='underscore' />
+```
+- note: this prop changes the style of the caret (more options coming soon)
 
 ### Styling
 

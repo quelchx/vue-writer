@@ -20,6 +20,18 @@ export default defineComponent({
       type: Number,
       default: 2000,
     },
+    intervals: {
+      type: Number,
+      default: 500 
+    },
+    start: {
+      type: Number,
+      default: 0
+    },
+    caret: {
+      type: String, 
+      default: 'cursor' 
+    }
   },
   data() {
     return {
@@ -54,12 +66,12 @@ export default defineComponent({
         this.typeStatus = false;
         this.arrayIndex += 1;
         if (this.arrayIndex >= this.array.length) this.arrayIndex = 0;
-        setTimeout(this.typewriter, this.typeSpeed + 1000);
+        setTimeout(this.typewriter, this.typeSpeed + this.intervals);
       }
     },
   },
   created() {
-    setTimeout(this.typewriter, this.delay + 200);
+    setTimeout(this.typewriter, this.start);
   },
 });
 </script>
@@ -68,7 +80,7 @@ export default defineComponent({
   <div class="is-typed">
     <slot />
     <span class="typed">{{ typeValue }}</span>
-    <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+    <span :class="caret + ' ' + { typing: typeStatus }">&nbsp;</span>
   </div>
 </template>
 
@@ -84,6 +96,15 @@ export default defineComponent({
 .is-typed span.cursor {
   display: inline-block;
   width: 3px;
+  background-color: black;
+  animation: blink 1s infinite;
+}
+
+.is-typed span.underscore {
+  display: inline-flex;
+  width: 10px;
+  height: 1px;
+  align-items:flex-end;
   background-color: black;
   animation: blink 1s infinite;
 }

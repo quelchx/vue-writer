@@ -12,6 +12,6 @@ export default defineComponent({
 
 <template>
   <div id="app">
-    <vue-writer :array="['Hello World']"/>
+    <vue-writer :array="['Hello World', 'Testing']"/>
   </div>
 </template>
