@@ -1,8 +1,7 @@
 import { defineComponent, openBlock, createBlock, renderSlot, createVNode, toDisplayString } from 'vue';
 
-var script = /*#__PURE__*/defineComponent({
+var script = defineComponent({
   name: "VueWriter",
-  // vue component name
   props: {
     array: {
       type: Array,
@@ -19,6 +18,18 @@ var script = /*#__PURE__*/defineComponent({
     delay: {
       type: Number,
       default: 2000
+    },
+    intervals: {
+      type: Number,
+      default: 500
+    },
+    start: {
+      type: Number,
+      default: 0
+    },
+    caret: {
+      type: String,
+      default: 'cursor'
     }
   },
 
@@ -54,14 +65,14 @@ var script = /*#__PURE__*/defineComponent({
         this.typeStatus = false;
         this.arrayIndex += 1;
         if (this.arrayIndex >= this.array.length) this.arrayIndex = 0;
-        setTimeout(this.typewriter, this.typeSpeed + 1000);
+        setTimeout(this.typewriter, this.typeSpeed + this.intervals);
       }
     }
 
   },
 
   created() {
-    setTimeout(this.typewriter, this.delay + 200);
+    setTimeout(this.typewriter, this.start);
   }
 
 });
@@ -74,9 +85,9 @@ const _hoisted_2 = {
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createBlock("div", _hoisted_1, [renderSlot(_ctx.$slots, "default"), createVNode("span", _hoisted_2, toDisplayString(_ctx.typeValue), 1), createVNode("span", {
-    class: ["cursor", {
+    class: _ctx.caret + ' ' + {
       typing: _ctx.typeStatus
-    }]
+    }
   }, " ", 2)]);
 }
 
@@ -107,7 +118,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.is-typed {\n  font-family: \"Monaco\";\n}\n.is-typed span.typed {\n  color: steelblue;\n}\n.is-typed span.cursor {\n  display: inline-block;\n  width: 4px;\n  background-color: black;\n  animation: blink 1s infinite;\n}\n.is-typed span.cursor.typing {\n  animation: none;\n}\n@keyframes blink {\n49% {\n    background-color: black;\n}\n50% {\n    background-color: transparent;\n}\n99% {\n    background-color: transparent;\n}\n}\n";
+var css_248z = "\n.is-typed {\n  font-family: \"Monaco\";\n}\n.is-typed span.typed {\n  color: black;\n}\n.is-typed span.cursor {\n  display: inline-block;\n  width: 3px;\n  background-color: black;\n  animation: blink 1s infinite;\n}\n.is-typed span.underscore {\n  display: inline-flex;\n  width: 10px;\n  height: 1px;\n  align-items:flex-end;\n  background-color: black;\n  animation: blink 1s infinite;\n}\n.is-typed span.cursor.typing {\n  animation: none;\n}\n@keyframes blink {\n49% {\n    background-color: black;\n}\n50% {\n    background-color: transparent;\n}\n99% {\n    background-color: transparent;\n}\n}\n";
 styleInject(css_248z);
 
 script.render = render;
