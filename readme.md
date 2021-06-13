@@ -28,6 +28,7 @@ Vue 3 component that simulates typing, and erasing text.
   - [Delay](#delay)
   - [Intervals](#intervals)
   - [Start](#start)
+  - [Caret](#caret)
 - [Styling](#styling)
 - [Coming Soon](#coming-soon)
 - [Contribution](#contribution)
