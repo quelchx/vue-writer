@@ -1,6 +1,6 @@
 {
   "name": "vue-writer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Vue 3 Typewriter Component",
   "main": "dist/vue-writer.ssr.js",
   "browser": "dist/vue-writer.esm.js",
@@ -51,10 +51,12 @@
   "keywords": [
     "vue",
     "nuxt",
-    "typewriter"
+    "typewriter",
+    "vue 3",
+    "vue typewriter"
   ],
   "author": "Eric Quelch",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/quelchx/vue-writer/issues"
   },

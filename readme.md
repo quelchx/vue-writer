@@ -29,6 +29,7 @@ Vue 3 component that simulates typing, and erasing text.
   - [Intervals](#intervals)
   - [Start](#start)
   - [Caret](#caret)
+- [Slots](#slot)
 - [Styling](#styling)
 - [Coming Soon](#coming-soon)
 - [Contribution](#contribution)
@@ -207,6 +208,18 @@ export default {
 <vue-writer :array="arr" :caret='underscore' />
 ```
 - note: this prop changes the style of the caret (more options coming soon)
+
+#### Slots
+
+You can pass child components and nested html before this component is loaded. A simple use case is demonstrated below: 
+
+```html
+<vue-writer array='["World"]'>
+  <p>Hello</p>
+</vue-writer>
+```
+
+- note: the children being passed will always come before the typewriter animation/effect. 
 
 ### Styling
 
