@@ -1,4 +1,4 @@
-# Vue Writer 
+# Vue Writer
 
 <img src='demo.gif' />
 
@@ -11,7 +11,7 @@ Vue 3 component that simulates typing, and erasing text.
 ![GitHub issues](https://img.shields.io/github/issues/quelchx/vue-writer?color=blue&label=Issues&style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues-raw/quelchx/vue-writer?color=red&label=Open%20Issues&style=flat-square)
 
-**Documentation is under construction -- package is working but still is currrently has additions being added daily**
+## Table Of Contents
 
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
@@ -36,7 +36,8 @@ Vue 3 component that simulates typing, and erasing text.
 - [Issues and Information](#issues)
 
 **Notes**
-> This package intention is to be a very lightweight typewriting feature you can add to your existing project! More will be added in time + extra customizations, and feautures. 
+
+> This package intention is to be a very lightweight typewriting feature you can add to your existing project! More will be added in time + extra customizations, and feautures.
 
 > This package was built using <a href='https://www.npmjs.com/package/vue-sfc-rollup' target='_blank'>**vue-sfc-rollup**</a>, and is intended to be used with Vue 3. If your using Vue 2, I recommend checking out <a href='https://www.npmjs.com/package/vue-typer'>Vue Typer</a> as it is supported by Vue 2 and has much more features than this package. This packages only dependancies are those that are shipped with vue-sfc-rollup
 
@@ -47,8 +48,10 @@ Vue 3 component that simulates typing, and erasing text.
 
 ## Installation
 
-### NPM 
+### NPM
+
 (Recommended)
+
 ```bash
 npm install vue-writer
 ```
@@ -68,35 +71,41 @@ npm install vue-writer
 **All examples are being shown while using npm init @vitejs/app to create a vue project in order to consume this package and it's component**
 
 ## Global
+
 Registering the component Globally
 
 **main.js**
-```js
-import { createApp } from 'vue'
-import App from './App.vue'
-import VueWriter from 'vue-writer'
 
-createApp(App).use(VueWriter).mount('#app')
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import VueWriter from "vue-writer";
+
+createApp(App)
+  .use(VueWriter)
+  .mount("#app");
 ```
 
 **App.vue** (Example)
+
 ```html
 <template>
   <VueWriter :array="arr" />
 </template>
 
 <script>
-export default {
-  data() {
-    return { arr: ['Hello', 'From', 'Vue Writer']}
-  }
-}
+  export default {
+    data() {
+      return { arr: ["Hello", "From", "Vue Writer"] };
+    },
+  };
 </script>
 ```
 
 ---
 
 ## Local
+
 Simple usage - registering the component locally
 
 **`App.vue`**
@@ -176,20 +185,20 @@ export default {
 - usage
 
 ```html
-<vue-writer :array="arr" :delay="1000" :intervals='200' />
+<vue-writer :array="arr" :delay="1000" :intervals="200" />
 ```
 
-- note: this prop controls how long the next word in the array will appear after the previous word is fully erased. 
+- note: this prop controls how long the next word in the array will appear after the previous word is fully erased.
 
 #### `start`
 
 - type: Number
 - default: 0
 - required: false
-- usage 
+- usage
 
 ```html
-<vue-writer :array="arr" :delay="1000" :start='2000' />
+<vue-writer :array="arr" :delay="1000" :start="2000" />
 ```
 
 - note: this props is used to control when the animation should begin. By default when the component is loaded on the page, the animation will start.
@@ -205,13 +214,14 @@ export default {
 - usage:
 
 ```html
-<vue-writer :array="arr" :caret='underscore' />
+<vue-writer :array="arr" :caret="underscore" />
 ```
+
 - note: this prop changes the style of the caret (more options coming soon)
 
 #### Slots
 
-You can pass child components and nested html before this component is loaded. A simple use case is demonstrated below: 
+You can pass child components and nested html before this component is loaded. A simple use case is demonstrated below:
 
 ```html
 <vue-writer array='["World"]'>
@@ -219,7 +229,7 @@ You can pass child components and nested html before this component is loaded. A
 </vue-writer>
 ```
 
-- note: the children being passed will always come before the typewriter animation/effect. 
+- note: the children being passed will always come before the typewriter animation/effect.
 
 ### Styling
 
@@ -245,6 +255,7 @@ You can easily override some basic properties such as the font and color by targ
 ---
 
 ## Coming Soon
+
 Possible Additions and Todo's
 
 **All are being worked on, or plan to be worked on in the near future**
