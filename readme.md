@@ -57,7 +57,7 @@ npm install vue-writer
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/npm/vue-writer@0.0.3/dist/vue-writer.esm.js"
+  src="https://cdn.jsdelivr.net/npm/vue-writer@1.0.7/dist/vue-writer.esm.js"
   integrity="sha256-mirxvAV/+LwGipr5mQVYEU3cpP15soM1I7nz97ckwbQ="
   crossorigin="anonymous"
 ></script>
