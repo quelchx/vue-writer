@@ -99,7 +99,7 @@ export default {
 ## Local
 Simple usage - registering the component locally
 
-**`App.js`**
+**`App.vue`**
 
 ```js
 <template>
