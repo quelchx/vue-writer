@@ -14,3 +14,6 @@ v.1.0.2 -> v.1.0.3
 
 v.1.0.2 -> v.1.0.5
 - Fixed some minor errors in readme.md file and forgot to build package before pushing to new version
+
+v.1.0.5 -> v1.0.8
+- API and documentation clean up, grammar and typo fixes
