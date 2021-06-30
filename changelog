@@ -17,3 +17,6 @@ v.1.0.2 -> v.1.0.5
 
 v.1.0.5 -> v1.0.8
 - API and documentation clean up, grammar and typo fixes
+
+v.1.0.8 -> v1.0.9
+- Moved 'dependencies' to developer dependencies.
