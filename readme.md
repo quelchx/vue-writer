@@ -233,20 +233,47 @@ You can pass child components and nested html before this component is loaded. A
 
 ### Styling
 
-Basic default styling has been added to the component. The default styling structure is as so:
+Styling has been removed from this component to make it easier for users to add custom styling. If you wish to style this component, the component has a few class selectors you can target to style. Here is an example:
 
 ```css
-/* CSS */
 .is-typed {
-  /* font-family: "Monaco"; */
+  font-family: "Monaco";
 }
 
 .is-typed span.typed {
-  /* color: black; */
+  color: black;
 }
 
 .is-typed span.cursor {
-  /* background-color: black; */
+  display: inline-block;
+  width: 3px;
+  background-color: black;
+  animation: blink 1s infinite;
+}
+
+.is-typed span.underscore {
+  display: inline-flex;
+  width: 10px;
+  height: 1px;
+  align-items:flex-end;
+  background-color: black;
+  animation: blink 1s infinite;
+}
+
+.is-typed span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  49% {
+    background-color: black;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
 }
 ```
 
