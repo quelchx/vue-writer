@@ -20,3 +20,6 @@ v.1.0.5 -> v1.0.8
 
 v.1.0.8 -> v1.0.9
 - Moved 'dependencies' to developer dependencies.
+
+v 1.0.9 -> 1.1.2
+- Removed styling to allow users to customize styling themselves. Users reported issues trying to override defualt styles. 
