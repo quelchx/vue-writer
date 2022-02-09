@@ -23,6 +23,7 @@ Vue 3 component that simulates typing, and erasing text.
   - [Local](#local)
 - [Properties](#properties)
   - [Array](#array)
+  - [Iterations](#iterations)
   - [Type Speed](#typeSpeed)
   - [Erase Speed](#eraseSpeed)
   - [Delay](#delay)
@@ -136,6 +137,18 @@ export default {
 ```
 
 - note: this prop has to be in an array even if its a single string.
+
+### `iterations`
+
+- type: Number
+- required: false
+- default: 0
+
+```html
+<vue-writer :array="['Hello', 'World'] :iterations='1'">
+```
+
+- By default this will loop forever unless you specify. This will loop through the array depending on the value you set. 
 
 #### `typeSpeed`
 
@@ -307,4 +320,4 @@ Package Repository: <a href='https://github.com/quelchx/vue-writer'>https://gith
 
 Author: Eric Quelch
 Github: <a href='https://github.com/quelchx'>https://github.com/quelchx</a>
-Website: <a href='https://quelchlax.tech'>https://quelchlax.tech</a>
+Website: <a href='https://quelchx.com'>https://quelchx.com</a>
