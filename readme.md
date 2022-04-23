@@ -310,7 +310,7 @@ The intention of this component is to be minimal and ligtweight -- so they're wi
 
 ## Contribution
 
-- If your interested in contributing to this package please contact me by email through my website at https://quelchlax.tech
+- If your interested in contributing to this package please contact me by email through my website at https://quelchx.com/contact
 
 ## Issues
 
