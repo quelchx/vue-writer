@@ -60,6 +60,8 @@ export default defineComponent({
       } else {
         this.count += 1;
 
+        this.onTyped(this.array[this.arrayIndex]);
+
         if (this.count === this.array.length) {
           loop += 1;
           if (loop === this.iterations) {
@@ -88,6 +90,9 @@ export default defineComponent({
         setTimeout(this.typewriter, this.typeSpeed + this.intervals);
       }
     },
+    onTyped(typedString) {
+      this.$emit("typed", typedString);
+    }
   },
   created() {
     setTimeout(this.typewriter, this.start);
