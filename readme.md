@@ -4,7 +4,7 @@
 
 ## ⚠️ Maintenance & support
 
-Due to current position I am in, I am no longer able to maintain this project and post updates. I have been focused on other priorities right now and have no current plans for further feature development or improvements.
+Due to my current position I hold, I am no longer able to maintain this project and post updates. I have been focused on other priorities right now and have no current plans for further feature development or improvements.
 
 It will continue to be here on GitHub and we will still make critical updates (e.g. security fixes, if any) as required, but will not be actively monitoring or replying to issues and pull requests.
 
