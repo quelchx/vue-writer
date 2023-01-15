@@ -1,6 +1,6 @@
 # Vue Writer 
 
-**For documentation please visit https://www.quelchx.com/projects/vue-writer**
+**For documentation please visit https://vue-writer-docs.vercel.app/**
 
 ## ⚠️ Maintenance & support
 
