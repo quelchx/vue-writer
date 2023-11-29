@@ -119,7 +119,7 @@ export default {
 - default: 0
 
 ```html
-<vue-writer :array="['Hello', 'World'] :iterations='1'"></vue-writer>
+<vue-writer :array="['Hello', 'World']" :iterations="'1'"></vue-writer>
 ```
 
 - By default, this will loop forever unless you specify. This will loop through the array depending on the value you set.
