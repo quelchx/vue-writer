@@ -6,7 +6,7 @@ v.1.0.2 -> v.1.0.3
   - Start
   - Intervals
 
-- Caret: currently added only one extra option, more to come in the feautures
+- Caret: currently added only one extra option, more to come in the future
 
 - Start: added prop to control when the animation should begin when the component is loaded
 
@@ -28,7 +28,7 @@ v.1.0.8 -> v1.0.9
 
 v 1.0.9 -> 1.1.2
 
-- Removed styling to allow users to customize styling themselves. Users reported issues trying to override defualt styles.
+- Removed styling to allow users to customize styling themselves. Users reported issues trying to override default styles.
 
 v 1.1.2 -> 2.0.0
 
@@ -37,3 +37,6 @@ v 1.1.2 -> 2.0.0
   - to: `import {VueWriter} from 'vue-writer'`
 - migrate to typescript and vite.
 - increase node version to 20 (LTS)
+
+v 2.0.0 -> 2.1.0
+- Add single string usage rather than having to always use an array.
