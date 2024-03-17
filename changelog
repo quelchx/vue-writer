@@ -1,5 +1,7 @@
 v.1.0.2 -> v.1.0.3
+
 - Added a few extra properties
+
   - Caret
   - Start
   - Intervals
@@ -13,13 +15,25 @@ v.1.0.2 -> v.1.0.3
 - Notes: more to come!
 
 v.1.0.2 -> v.1.0.5
+
 - Fixed some minor errors in readme.md file and forgot to build package before pushing to new version
 
 v.1.0.5 -> v1.0.8
+
 - API and documentation clean up, grammar and typo fixes
 
 v.1.0.8 -> v1.0.9
+
 - Moved 'dependencies' to developer dependencies.
 
 v 1.0.9 -> 1.1.2
-- Removed styling to allow users to customize styling themselves. Users reported issues trying to override defualt styles. 
+
+- Removed styling to allow users to customize styling themselves. Users reported issues trying to override defualt styles.
+
+v 1.1.2 -> 2.0.0
+
+- BREAKING: Local imports changed:
+  - from: `import VueWriter from 'vue-writer'`
+  - to: `import {VueWriter} from 'vue-writer'`
+- migrate to typescript and vite.
+- increase node version to 20 (LTS)

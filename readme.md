@@ -16,7 +16,7 @@ quelchx
 Software Enginner
 ScriptString AI
 
---- 
+---
 
 Vue 3 component that simulates typing, and erasing text.
 
@@ -91,7 +91,7 @@ Simple usage - registering the component locally
   <VueWriter :array="['Hello World']" />
 </template>
 <script>
-import VueWriter from 'vue-writer'
+import {VueWriter} from 'vue-writer'
 export default {
   components: {VueWriter}
 }
