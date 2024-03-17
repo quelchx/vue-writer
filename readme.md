@@ -1,23 +1,3 @@
-# Vue Writer
-
-## Notice for Community
-
-Dear Esteemed Community Members,
-
-It is with a sense of duty that we communicate the deprecation of AOS Vue after two years of dedicated service. This decision has been made following meticulous consideration, recognizing the commendable role it has played in fulfilling its intended purpose.
-
-Due to increasing commitments, the project's maintenance has become a challenge for me to undertake single-handedly. In light of this, we encourage community members to contribute to the project by forking the repository and implementing changes, improvements, or additional features. I will be actively involved in reviewing and approving such contributions.
-
-Your continued support and collaboration are deeply appreciated as we navigate this transition. We extend our gratitude to all contributors for their valuable input over the years.
-
-Best Regards,
-
-quelchx
-Software Enginner
-ScriptString AI
-
----
-
 Vue 3 component that simulates typing, and erasing text.
 
 [Vue Writer](https://www.npmjs.com/package/vue-writer) is a typewriting component with a lot of features built for Vue 3. Vue Writer is used across multiple websites and is growing at a steady rate.
