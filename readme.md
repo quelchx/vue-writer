@@ -1,6 +1,4 @@
-Vue 3 component that simulates typing, and erasing text.
-
-[Vue Writer](https://www.npmjs.com/package/vue-writer) is a typewriting component with a lot of features built for Vue 3. Vue Writer is used across multiple websites and is growing at a steady rate.
+## Vue 3 component that simulates typing, and erasing text.
 
 ## Requirements
 
