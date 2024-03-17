@@ -16,7 +16,7 @@ quelchx
 Software Enginner
 ScriptString AI
 
---- 
+---
 
 Vue 3 component that simulates typing, and erasing text.
 
@@ -91,7 +91,7 @@ Simple usage - registering the component locally
   <VueWriter :array="['Hello World']" />
 </template>
 <script>
-import VueWriter from 'vue-writer'
+import {VueWriter} from 'vue-writer'
 export default {
   components: {VueWriter}
 }
@@ -217,6 +217,19 @@ You can pass child components and nested HTML before this component is loaded. A
 ```
 
 - note: the children being passed will always come before the typewriter animation/effect.
+
+### Emits
+
+#### `typed`
+
+- type: String
+- usage:
+
+```html
+<vue-writer :array="arr" @typed="onTyped" />
+```
+
+- note: this event will emit the current word that has been typed.
 
 ### Styling
 

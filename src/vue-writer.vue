@@ -1,103 +1,89 @@
-<script>
-import { defineComponent } from "vue";
+<script lang="ts" setup>
+import { withDefaults, defineProps, ref } from "vue";
 
-export default defineComponent({
-  name: "VueWriter",
-  props: {
-    array: {
-      type: Array,
-      required: true,
-    },
-    eraseSpeed: {
-      type: Number,
-      default: 100,
-    },
-    typeSpeed: {
-      type: Number,
-      default: 200,
-    },
-    delay: {
-      type: Number,
-      default: 2000,
-    },
-    intervals: {
-      type: Number,
-      default: 500,
-    },
-    start: {
-      type: Number,
-      default: 0,
-    },
-    caret: {
-      type: String,
-      default: "cursor",
-    },
-    iterations: {
-      type: Number,
-      default: 0,
-    },
-  },
-  data() {
-    return {
-      typeValue: "",
-      count: 0,
-      typeStatus: false,
-      arrayIndex: 0,
-      charIndex: 0,
-    };
-  },
-  methods: {
-    typewriter() {
-      let loop = 0;
-      if (this.charIndex < this.array[this.arrayIndex].length) {
-        if (!this.typeStatus) {
-          this.typeStatus = true;
-        }
+const {
+  array,
+  eraseSpeed,
+  typeSpeed,
+  delay,
+  intervals,
+  start,
+  caret,
+  iterations,
+} = withDefaults(
+  defineProps<{
+    array: string[];
+    eraseSpeed: number;
+    typeSpeed: number;
+    delay: number;
+    intervals: number;
+    start: number;
+    caret: string;
+    iterations: number;
+  }>(),
+  {
+    eraseSpeed: 100,
+    typeSpeed: 200,
+    delay: 2000,
+    intervals: 500,
+    start: 0,
+    caret: "cursor",
+    iterations: 0,
+  }
+);
 
-        this.typeValue += this.array[this.arrayIndex].charAt(this.charIndex);
-        this.charIndex += 1;
-        setTimeout(this.typewriter, this.typeSpeed);
-      } else {
-        this.count += 1;
+const emit = defineEmits(["typed"]);
 
-        this.onTyped(this.array[this.arrayIndex]);
+const typeValue = ref("");
+const count = ref(0);
+const typeStatus = ref(false);
+const arrayIndex = ref(0);
+const charIndex = ref(0);
 
-        if (this.count === this.array.length) {
-          loop += 1;
-          if (loop === this.iterations) {
-            return (this.typeStatus = false);
-          }
-        }
-
-        this.typeStatus = false;
-
-        setTimeout(this.eraser, this.delay);
-      }
-    },
-    eraser() {
-      if (this.charIndex > 0) {
-        if (!this.typeStatus) this.typeStatus = true;
-        this.typeValue = this.array[this.arrayIndex].substring(
-          0,
-          this.charIndex - 1
-        );
-        this.charIndex -= 1;
-        setTimeout(this.eraser, this.eraseSpeed);
-      } else {
-        this.typeStatus = false;
-        this.arrayIndex += 1;
-        if (this.arrayIndex >= this.array.length) this.arrayIndex = 0;
-        setTimeout(this.typewriter, this.typeSpeed + this.intervals);
-      }
-    },
-    onTyped(typedString) {
-      this.$emit("typed", typedString);
+function typewriter() {
+  let loop = 0;
+  if (charIndex.value < array[arrayIndex.value].length) {
+    if (!typeStatus.value) {
+      typeStatus.value = true;
     }
-  },
-  created() {
-    setTimeout(this.typewriter, this.start);
-  },
-});
+
+    typeValue.value += array[arrayIndex.value].charAt(charIndex.value);
+    charIndex.value += 1;
+    setTimeout(typewriter, typeSpeed);
+  } else {
+    count.value += 1;
+
+    onTyped(array[arrayIndex.value]);
+
+    if (count.value === array.length) {
+      loop += 1;
+      if (loop === iterations) {
+        return (typeStatus.value = false);
+      }
+    }
+
+    typeStatus.value = false;
+
+    setTimeout(eraser, delay);
+  }
+}
+function eraser() {
+  if (charIndex.value > 0) {
+    if (!typeStatus.value) typeStatus.value = true;
+    typeValue.value = array[arrayIndex.value].substring(0, charIndex.value - 1);
+    charIndex.value -= 1;
+    setTimeout(eraser, eraseSpeed);
+  } else {
+    typeStatus.value = false;
+    arrayIndex.value += 1;
+    if (arrayIndex.value >= array.length) arrayIndex.value = 0;
+    setTimeout(typewriter, typeSpeed + intervals);
+  }
+}
+function onTyped(typedString: string) {
+  emit("typed", typedString);
+}
+setTimeout(typewriter, start);
 </script>
 
 <template>
