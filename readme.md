@@ -78,17 +78,22 @@ export default {
 
 ### Properties
 
-#### `array`
+#### `string`
 
-- type: Array
+- type: Array | String
 - required: true
 - usage:
 
 ```html
-<vue-writer :array="['adding single string soon']" />
+<!-- You can pass array of strings -->
+<vue-writer :string="['Hello World!', 'VueWriter is awesome!']" />
+<!-- or a single string -->
+<vue-writer string="you can use single string" />
 ```
 
-- note: this prop has to be in an array even if it's a single string.
+#### `array`
+- `deprecated`, will be removed in the next major version.
+- provide the same functionality as `string`
 
 ### `iterations`
 
@@ -262,7 +267,6 @@ Possible Additions and Todo's
 
 This component intends to be minimal and lightweight -- so they're will be a limit to how many additional features will be added in time. Currently, I am looking into adding the following in time:
 
-- Add single string usage rather than having to always use an array
 - Add more customer cursors
 - Add different animation options
 - Add different erasing animations
