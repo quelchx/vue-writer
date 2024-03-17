@@ -218,6 +218,19 @@ You can pass child components and nested HTML before this component is loaded. A
 
 - note: the children being passed will always come before the typewriter animation/effect.
 
+### Emits
+
+#### `typed`
+
+- type: String
+- usage:
+
+```html
+<vue-writer :array="arr" @typed="onTyped" />
+```
+
+- note: this event will emit the current word that has been typed.
+
 ### Styling
 
 Styling has been removed from this component to make it easier for users to add custom styling. If you wish to style this component, the component has a few class selectors you can target to style. Here is an example:
