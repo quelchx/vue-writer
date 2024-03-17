@@ -66,7 +66,7 @@ Simple usage - registering the component locally
 
 ```js
 <template>
-  <VueWriter :array="['Hello World']" />
+  <VueWriter string="Hello World" />
 </template>
 <script>
 import {VueWriter} from 'vue-writer'
@@ -102,7 +102,7 @@ export default {
 - default: 0
 
 ```html
-<vue-writer :array="['Hello', 'World']" :iterations="'1'"></vue-writer>
+<vue-writer :string="['Hello', 'World']" :iterations="'1'"></vue-writer>
 ```
 
 - By default, this will loop forever unless you specify. This will loop through the array depending on the value you set.
@@ -115,7 +115,7 @@ export default {
 - usage:
 
 ```html
-<vue-writer :array="arr" :typeSpeed="70" />
+<vue-writer :string="arr" :typeSpeed="70" />
 ```
 
 - note: higher the number the slower the typing speed is.
@@ -128,7 +128,7 @@ export default {
 - usage:
 
 ```html
-<vue-writer :array="arr" :eraseSpeed="50" :typeSpeed="100" />
+<vue-writer :string="arr" :eraseSpeed="50" :typeSpeed="100" />
 ```
 
 - note: this prop controls how fast each character is erased in second intervals.
@@ -141,7 +141,7 @@ export default {
 - usage
 
 ```html
-<vue-writer :array="arr" :eraseSpeed="50" :typeSpeed="100" :delay="1000" />
+<vue-writer :string="arr" :eraseSpeed="50" :typeSpeed="100" :delay="1000" />
 ```
 
 - note: 1000 = 1 second
@@ -155,7 +155,7 @@ export default {
 - usage
 
 ```html
-<vue-writer :array="arr" :delay="1000" :intervals="200" />
+<vue-writer :string="arr" :delay="1000" :intervals="200" />
 ```
 
 - note: this prop controls how long the next word in the array will appear after the previous word is fully erased.
@@ -168,7 +168,7 @@ export default {
 - usage
 
 ```html
-<vue-writer :array="arr" :delay="1000" :start="2000" />
+<vue-writer :string="arr" :delay="1000" :start="2000" />
 ```
 
 - note: this prop is used to control when the animation should begin. By default when the component is loaded on the page, the animation will start.
@@ -184,7 +184,7 @@ export default {
 - usage:
 
 ```html
-<vue-writer :array="arr" :caret="underscore" />
+<vue-writer :string="arr" :caret="underscore" />
 ```
 
 - note: this prop changes the style of the caret (more options coming soon)
@@ -194,7 +194,7 @@ export default {
 You can pass child components and nested HTML before this component is loaded. A simple use case is demonstrated below:
 
 ```html
-<vue-writer array='["World"]'>
+<vue-writer string="World">
   <p>Hello</p>
 </vue-writer>
 ```
