@@ -40,7 +40,7 @@ const typeStatus = ref(false);
 const arrayIndex = ref(0);
 const charIndex = ref(0);
 
-let timeoutId = null;
+let timeoutId: number | null = null;
 
 function typewriter() {
   let loop = 0;
