@@ -1,6 +1,6 @@
 {
   "name": "vue-writer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "author": {
     "name": "Eric Quelch",
@@ -29,6 +29,7 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.2.2",
     "vite": "^5.1.6",
+    "vue": "^3.4.27",
     "vue-tsc": "^1.8.27"
   },
   "peerDependencies": {
